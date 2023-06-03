@@ -1,0 +1,21 @@
+public class Automobile {
+    private String brand;
+    private String model;
+    
+    public Automobile(String brand, String model) {
+        this.brand = brand;
+        this.model = model;
+    }
+    
+    public void introduce() {
+        System.out.println("The Winner of the awards Car of the year is " + brand + " and the model is " + model + ".");
+    }
+    
+    public static void main(String[] args) {
+        Automobile brand1 = new Automobile("Lancia", "Beta");
+        Automobile brand2 = new Automobile("Alfa Romeo", "159");
+        
+        brand1.introduce();
+        brand2.introduce();
+    }
+}
