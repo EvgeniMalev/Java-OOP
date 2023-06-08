@@ -1,0 +1,70 @@
+import java.util.Scanner;
+
+// Define the Car class
+class Car {
+    private String make;
+    private String model;
+    private int year;
+
+    // Constructor
+    public Car(String make, String model, int year) {
+        this.make = make;
+        this.model = model;
+        this.year = year;
+    }
+
+    // Getters and setters
+    public String getMake() {
+        return make;
+    }
+
+    public void setMake(String make) {
+        this.make = make;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
+
+    // Method to display car information
+    public void displayInfo() {
+        System.out.println("Car: " + make + " " + model + " (" + year + ")");
+    }
+}
+
+// Main class
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Get car information from the user
+        System.out.print("Enter the make of the car: ");
+        String make = scanner.nextLine();
+
+        System.out.print("Enter the model of the car: ");
+        String model = scanner.nextLine();
+
+        System.out.print("Enter the year of the car: ");
+        int year = scanner.nextInt();
+
+        // Create a car object using the user input
+        Car car = new Car(make, model, year);
+
+        // Display car information
+        System.out.println();
+        System.out.println("Car information:");
+        car.displayInfo();
+    }
+}
