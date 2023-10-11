@@ -1,0 +1,19 @@
+class SampleClass 
+{
+    void output() 
+       { 
+           System.out.println("Today we will start to code on Java"); 
+       } 
+           void output1() 
+       { 
+           System.out.println("Today we will start to code on C++"); 
+       } 
+} 
+class Main
+{ 
+    public static void main(String args[]) 
+       {   
+          SampleClass obj = new SampleClass(); 
+          obj.output();  
+       } 
+}
