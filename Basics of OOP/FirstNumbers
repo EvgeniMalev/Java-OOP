@@ -1,0 +1,13 @@
+import java.util.*;
+
+public class Main {
+    int y = 10;
+    int x = 15;
+    
+    public static void main(String[] args) {
+        Main myObj = new Main(); 
+
+        System.out.println(myObj.y);
+        System.out.println(myObj.x);
+    }
+}
