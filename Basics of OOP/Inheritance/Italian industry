@@ -1,0 +1,50 @@
+class Italindustry {
+
+  String name;
+
+  public void producehomeapplience() {
+    System.out.println("Home appliances factories with headquarters in Province of Ancona");
+  }
+
+  public void produceautomobiles() {
+    System.out.println("Sport car manufacturer from Milan is");
+  }
+}
+
+class Indesit extends Italindustry {
+
+  public void display() {
+    System.out.println("The company is " + name);
+  }
+}
+
+class AlfaRomeo extends Italindustry {
+
+  public void display() {
+    System.out.println("The car company is " + name);
+  }
+}
+
+public class Main {
+  public static void main(String[] args) {
+
+    Indesit labrador = new Indesit();
+
+    labrador.name = "The company based in Fabriano";
+    labrador.display();
+
+    labrador.producehomeapplience();
+  }
+}
+
+public class Main1 {
+  public static void main(String[] args) {
+
+    AlfaRomeo labrador = new AlfaRomeo();
+
+    labrador.name = "The company based in Milan";
+    labrador.display();
+
+    labrador.produceautomobiles();
+  }
+}
