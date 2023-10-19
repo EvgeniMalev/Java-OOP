@@ -1,0 +1,23 @@
+abstract class Telephone {
+    Telephone(){
+  System.out.println("Telephone were belivered. ");
+  }
+ abstract void ring();
+ void changeCondition(){
+  System.out.println("Telephone is ringing!");
+ }
+} 
+
+class Telephone extends Alcatel{
+  void talking(){
+   System.out.println("Speak in moderation!");
+  }
+ }
+
+class Abstraction {
+  public static void main (String args[]){
+   Telephone obj = new Alcatel();
+   obj.ring();
+   obj.talking();
+  }
+ }
