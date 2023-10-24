@@ -1,0 +1,25 @@
+
+Abstract class mathematics {
+         
+      public abstract void part1 ( ) ;
+         }
+     Public class part1 extends mathematics {
+      Public void part1 ( ) {
+System.out.println (“ Solving geometrical problems! “ );
+}
+public Static void main ( String args [ ] ) {
+ mathematics obj1 = new part1 ( );
+obj1. sound ();
+}
+}
+      public abstract void part2 ( ) ;
+         }
+     Public class part2 extends mathematics {
+      Public void part2 ( ) {
+System.out.println (“ Solving trigonometry problems! “ );
+}
+public Static void main ( String args [ ] ) {
+ mathematics obj2 = new part2 ( );
+obj2. sound ();
+}
+}
