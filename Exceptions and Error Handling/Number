@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+public class Number {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int numbersEntered = 0; 
+
+        while (numbersEntered < 10) {
+            String input = scanner.nextLine();
+            int num;
+
+            try {
+                num = Integer.parseInt(input);
+            } catch (NumberFormatException e) {
+              
+                System.out.println("Invalid Number: " + input);
+                continue; 
+            }
+
+            if (num % 2 == 0) {
+                String message = String.format("The number is not odd: %d", num);
+                System.out.println(message);
+            } else {
+                System.out.println("The number is odd.");
+            }
+            
+            numbersEntered++; 
+        }
+    }
+}
+
+
+
+
+
+
+
