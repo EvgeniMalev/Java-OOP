@@ -1,0 +1,48 @@
+
+abstract class Flower {
+    private String name;
+ 
+    public Flower(String name) { 
+        this.name = name; 
+    }
+ 
+    public abstract void smells();
+ 
+    public String getName() { 
+       return name; 
+    }
+}
+ 
+
+class Mushkato extends Flowers {
+    public Mushkato(String name) { 
+        super(name); 
+    }
+ 
+    public void smells() {
+        System.out.println(getName() + "had a good smell!");
+    }
+}
+ 
+
+class Kokitche extends Flowers {
+    public Kokitche(String name) { 
+         super(name);
+    }
+ 
+    public void smells() {
+        System.out.println(getName() + "had a smell on the spring");
+    }
+}
+ 
+
+public class Main {
+    public static void main(String[] args){
+
+        Flower myMushkato = new Mushkato("Tommy");
+        Flower myKokiche = new Kokiche("Snezhko");
+ 
+        myMushkato.smells();
+        myKokiche.smells();
+    }
+}
