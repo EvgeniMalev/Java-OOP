@@ -1,0 +1,51 @@
+
+class Bank {  
+
+private long Bank_account;  
+private String name,branch;  
+private float employees;  
+ 
+public long Bank_account() {  
+    return Bank_account;  
+}  
+public void setBank_account(long Bank_account) {  
+    this.Bank_account = Bank_account;  
+}  
+public String getName() {  
+    return name;  
+}  
+public void setName(String name) {  
+    this.name = name;  
+}  
+public String getbranch() {  
+    return branch;  
+}  
+public void setexchangeratesBGNtoRBL(String exchangeratesBGNtoRBL) {  
+    this.exchangeratesBGNtoRBL = exchangeratesBGNtoRBL;  
+}  
+public void setexchangeratesBGNtoEUR(String exchangeratesBGNtoEUR) {  
+    this.exchangeratesBGNtoEUR = exchangeratesBGNtoEUR;  
+}  
+public void setexchangeratesBGNtoUSD(String setexchangeratesBGNtoUSD) {  
+    this.setexchangeratesBGNtoUSD = setexchangeratesBGNtoUSD;  
+}  
+public float getEmployees() {    
+    return employees;  
+}  
+public void setEmployees(float employees) {  
+    this.employees = employees;  
+}  
+public String getexchangeratesBGNtoRBL() {  
+    return exchangeratesBGNtoRBL;  
+}  
+public void setexchangeratesBGNtoRBL(String exchangeratesBGNtoRBL) {  
+    this.exchangeratesBGNtoRBL = exchangeratesBGNtoRBL;    
+}  
+
+public String getexchangeratesBGNtoUSD() {  
+    return exchangeratesBGNtoUSD;  
+}  
+public void setexchangeratesBGNtoUSD(String exchangeratesBGNtoUSD) {  
+    this.exchangeratesBGNtoUSD = exchangeratesBGNtoUSD;    
+} 
+}
