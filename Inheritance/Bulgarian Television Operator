@@ -1,0 +1,17 @@
+ class BulgarianTelevisionOperator {
+    int basechannels = 6; 
+}
+
+class Basechannels extends Promochannels { 
+    int packagechannels = 10;
+    int sportchannels = 16;
+}
+
+class TTV {
+    public static void main(String args[]) {
+        Basechannels TV1 = new Basechannels(); // Changed "promochannels" to "Basechannels"
+        System.out.println("Channels : " + TV1.basechannels // Changed "basechannels" to "basechannels"
+                           + "\npackagechannels : " + TV1.packagechannels); // Corrected the typo "pachagechannels" to "packagechannels"
+        System.out.println("Sport : " + TV1.sportchannels);
+    }
+}
