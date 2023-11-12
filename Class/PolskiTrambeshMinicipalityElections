@@ -1,0 +1,32 @@
+public class PolskiTrambeshMinicipality {
+
+    static String Settlement;
+    static float Population;
+    static String Mayor;
+    static String PoliticalParty;
+
+    static void set(String n, float p, String m, String party) {
+        Settlement = n;
+        Population = p;
+        Mayor = m;
+        PoliticalParty = party;
+    }
+
+    static void get() {
+        System.out.println("The name of the settlement is: " + Settlement);
+        System.out.println("with population: " + Population);
+        System.out.println("The mayor is: " + Mayor);
+        System.out.println("from: " + PoliticalParty);
+    }
+
+    public static void main(String args[]) {
+        PolskiTrambeshMinicipality.set("Polski Senovets", 575, "Petko Ivanov", "Nezavisim");
+        PolskiTrambeshMinicipality.get();
+        PolskiTrambeshMinicipality.set("Radanovo", 1390, "Yordan Yordanov", "BSP");
+        PolskiTrambeshMinicipality.get();
+        PolskiTrambeshMinicipality.set("Kutsina", 530, "Emil Georgiev", "PP");
+        PolskiTrambeshMinicipality.get();
+        PolskiTrambeshMinicipality.set("Klimentovo", 599, "Plamen Spasov", "PP");
+        PolskiTrambeshMinicipality.get();
+    }
+}
