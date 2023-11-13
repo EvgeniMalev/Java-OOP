@@ -1,27 +1,21 @@
-public class Boolean { 
-  
+public class BooleanOperations {
 
-    public int boolean(boolean x, boolean y) 
-    { 
-        return (x && y); 
-    } 
-  
+    public boolean andOperation(boolean x, boolean y) {
+        return x && y;
+    }
 
-    public int boolean(boolean x, boolean y) 
-    { 
-        return (x || y); 
-    } 
-  
-    public double boolean(boolean x, boolean y, boolean z, boolean p) 
-    { 
-        return ((x && y)||(x || y)); 
-    } 
-  
-    public static void main(String args[]) 
-    { 
-        Sum s = new Sum(); 
-        System.out.println(s.sum(true, false)); 
-        System.out.println(s.sum(true, true)); 
-        System.out.println(s.sum(false, false, false, false)); 
-    } 
-} 
+    public boolean orOperation(boolean x, boolean y) {
+        return x || y;
+    }
+
+    public boolean complexOperation(boolean x, boolean y, boolean z, boolean p) {
+        return (x && y) || (x || y);
+    }
+
+    public static void main(String args[]) {
+        BooleanOperations operations = new BooleanOperations();
+        System.out.println(operations.andOperation(true, false));
+        System.out.println(operations.orOperation(true, true));
+        System.out.println(operations.complexOperation(false, false, false, false));
+    }
+}
