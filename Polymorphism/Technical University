@@ -1,0 +1,48 @@
+class TUVT {
+    void Print() {
+        System.out.println("Technical University");
+    }
+}
+
+class MF extends TUVT {
+    void Print() {
+        System.out.println("Mechanical faculty");
+    }
+}
+
+class EF extends TUVT {
+    void Print() {
+        System.out.println("Electrical faculty");
+    }
+}
+
+class DE extends EF {
+    void Print() {
+        System.out.println("Department of Power Engineering");
+    }
+}
+
+class CSF extends TUVT {
+    void Print() {
+        System.out.println("Computer science faculty");
+    }
+}
+
+class TechnicalUniversity {
+    public static void main(String[] args) {
+        TUVT a;
+
+        a = new MF();
+        a.Print();
+
+        a = new EF();
+        a.Print();
+
+        a = new CSF();
+        a.Print();
+
+        EF b;
+        b = new DE();
+        b.Print(); // Corrected from a.Print() to b.Print()
+    }
+}
