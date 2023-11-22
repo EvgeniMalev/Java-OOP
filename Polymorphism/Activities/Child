@@ -1,0 +1,11 @@
+class Child extends Human {
+    @Override
+    public void activity() {
+        System.out.println("Child is playing");
+    }
+
+    public static void main(String args[]) {
+        Child childObj = new Child();
+        childObj.activity();
+    }
+}
