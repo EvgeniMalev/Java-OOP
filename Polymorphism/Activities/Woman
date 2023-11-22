@@ -1,0 +1,11 @@
+class Woman extends Human {
+    @Override
+    public void activity() {
+        System.out.println("Woman is cooking");
+    }
+
+    public static void main(String args[]) {
+        Woman womanObj = new Woman();
+        womanObj.activity();
+    }
+}
