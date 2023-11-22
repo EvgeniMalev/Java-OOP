@@ -1,0 +1,11 @@
+class Man extends Human {
+    @Override
+    public void activity() {
+        System.out.println("Man is working");
+    }
+
+    public static void main(String args[]) {
+        Man manObj = new Man();
+        manObj.activity();
+    }
+}
