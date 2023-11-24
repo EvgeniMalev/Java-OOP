@@ -1,0 +1,52 @@
+class Fiat {
+    void production() {
+        System.out.println("is produced");
+    }
+}
+
+class FiatTopolino extends Fiat {
+    void eat() {
+        System.out.println("1936");
+    }
+}
+
+class Fiat500 extends FiatTopolino {
+    void eat() {
+        System.out.println("1957");
+    }
+}
+
+class Fiat126 extends Fiat500 {
+    void eat() {
+        System.out.println("1976");
+    }
+}
+
+class FiatCinquecento extends Fiat126 {
+    void eat() {
+        System.out.println("1993");
+    }
+}
+
+class FiatNuova500 extends FiatCinquecento {
+    void eat() {
+        System.out.println("2007");
+    }
+}
+
+public class Main {
+    public static void main(String args[]) {
+        Fiat car1, car2, car3, car4, car5;
+        car1 = new FiatNuova500();
+        car2 = new FiatTopolino();
+        car3 = new Fiat500();
+        car4 = new Fiat126();
+        car5 = new FiatCinquecento();
+
+        car1.production();
+        car2.production();
+        car3.production();
+        car4.production();
+        car5.production();
+    }
+}
