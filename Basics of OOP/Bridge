@@ -1,0 +1,62 @@
+class Bridge {
+    private String name;
+    private String material;
+    private int year;
+
+    public Bridge(String name, String material, int year) {
+        System.out.println("Constructing a Bridge");
+        this.name = name;
+        this.material = material;
+        this.year = year;
+    }
+
+    public void materialCheck() {
+        System.out.println("The bridge " + this.name + " is made from " + this.material);
+    }
+
+    public String toString() {
+        return name + " " + material + " " + year;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getMaterial() {
+        return material;
+    }
+
+    public void setMaterial(String newMaterial) {
+        this.material = newMaterial;
+    }
+
+    public int getYear() {
+        return year;
+    }
+}
+
+class Material extends Bridge {
+
+    public Material(String name, String material, int year) {
+        super(name, material, year);
+    }
+
+    // This method conflicts with the 'material' variable in the superclass
+    // Consider renaming the method or the 'material' variable to avoid conflicts
+
+    // public double getMaterial() {
+    //     return material;
+    // }
+
+    public void setYear(int newYear) {
+        if (newYear >= 1925) {
+            this.year = newYear;
+        }
+    }
+
+    // Logic needs to be reconsidered as 'getName()' is not a method in this class
+    // public int builded() {
+    //     System.out.println("The bridges which are built before 1925 are: " + getName());
+    //     return year;
+    // }
+}
