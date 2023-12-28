@@ -1,0 +1,39 @@
+
+=========================================================
+Task which You`ve had to write the price of a jumper in
+different countries. The price is a function of the taxes
+and the cost-living conditions.
+=========================================================
+
+class Jumberprice {
+  public void price() {
+    System.out.println("Find price ");
+  }
+public void price(double m, double ma, double mb) {
+    System.out.println("The price of the jumper in USA is = "0.15*m*ma*mb);
+  }
+
+public void price(double n, double na) {
+    System.out.println("The price of the jumper in Agolla is = "0.07*n*na);
+  ;
+  }
+public void price(double s, double sa, double sb) {
+    System.out.println("The price of the jumper in Serbia is = "0.11*s*sa*sb);
+;
+  }
+
+
+}
+
+class Main {
+  public static void main(String[] args) {
+    Price myPrice = new Prices();  
+
+    
+    myPrice.price();
+    myPrice.price(25, 1.5, 3);
+    myPrice.price(15, 0.7);
+    myPrice.price(20.5, 1.3, 2.6);
+    
+  }
+}
