@@ -1,0 +1,57 @@
+package stuntClimb;
+
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class ClimbingTests {
+
+    @Test
+    public void testGetName() {
+        Climbing climbing = new Climbing("Mountain Rila", 5);
+        assertEquals("Mountain Rila", climbing.getName());
+    }
+
+    @Test
+    public void testGetCapacity() {
+        Climbing climbing = new Climbing("Mountain Rila", 5);
+        assertEquals(5, climbing.getCapacity());
+    }
+
+    @Test
+    public void testAddRockClimber() {
+        Climbing climbing = new Climbing("Mountain Rila", 2);
+        assertEquals(0, climbing.getCount()); // Initially, no climbers
+
+        RockClimber climber1 = new RockClimber("Ivan", 50);
+        climbing.addRockClimber(climber1);
+        assertEquals(1, climbing.getCount());
+
+        RockClimber climber2 = new RockClimber("Peter", 60);
+        climbing.addRockClimber(climber2);
+        assertEquals(2, climbing.getCount());
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testAddRockClimberToFullClimbing() {
+        Climbing climbing = new Climbing("Mountain Pirin", 1);
+        RockClimber climber1 = new RockClimber("Milcho", 70);
+        RockClimber climber2 = new RockClimber("Vladimir", 80);
+
+        climbing.addRockClimber(climber1);
+        climbing.addRockClimber(climber2);
+    }
+
+    @Test
+    public void testRemoveRockClimber() {
+        Climbing climbing = new Climbing("Mountain Rodopi", 3);
+        RockClimber climber1 = new RockClimber("Georgi", 45);
+        RockClimber climber2 = new RockClimber("Nikolai", 55);
+
+        climbing.addRockClimber(climber1);
+        climbing.addRockClimber(climber2);
+        assertEquals(2, climbing.getCount());
+
+        climbing.removeRockClimber("Nikolai");
+        assertEquals(1, climbing.getCount());
+    }
+}
