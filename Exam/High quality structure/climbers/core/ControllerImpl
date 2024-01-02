@@ -1,0 +1,96 @@
+package climbers.core;
+
+import climbers.models.mountain.Mountain;
+import climbers.models.climber.RockClimber;
+import climbers.models.climber.WallClimber;
+import climbers.models.mountain.MountainImpl;
+import climbers.models.climber.Climber;
+import climbers.repositories.ClimberRepository;
+import climbers.repositories.ClimberRepositoryImpl;
+import climbers.repositories.MountainRepository;
+import climbers.repositories.MountainRepositoryImpl;
+import java.util.Arrays;
+import java.util.Collection;
+
+public class ControllerImpl implements Controller {
+    private final ClimberRepository climberRepository;
+    private final MountainRepository mountainRepository;
+
+    public ControllerImpl() {
+        this.climberRepository = new ClimberRepositoryImpl();
+        this.mountainRepository = new MountainRepositoryImpl();
+    }
+
+    @Override
+    public String addClimber(String type, String climberName) {
+        // Implement adding a climber of a given type to the repository
+        // Handle invalid climber type
+        Climber climber;
+        if (type.equals("RockClimber")) {
+            climber = new RockClimber(climberName, 100); 
+        } else if (type.equals("WallClimber")) {
+            climber = new WallClimber(climberName, 80); 
+        } else {
+            throw new IllegalArgumentException("Climber type doesn't exist.");
+        }
+        climberRepository.add(climber);
+        return "Added " + type + ": " + climberName + ".";
+    }
+
+    @Override
+    public String addMountain(String mountainName, String... peaks) {
+        // Implement adding a mountain with peaks to the repository
+        Mountain mountain = new MountainImpl(mountainName, Arrays.asList(peaks));
+        mountainRepository.add(mountain);
+        return "Added Mountain: " + mountainName + ".";
+    }
+
+    @Override
+    public String removeClimber(String climberName) {
+        // Implement removing a climber from the repository
+        Climber climber = climberRepository.byName(climberName);
+        if (climber == null) {
+            throw new IllegalArgumentException("Climber " + climberName + " doesn't exist.");
+        }
+        climberRepository.remove(climber);
+        return "Climber " + climberName + " was removed!";
+    }
+
+    @Override
+    public String startClimbing(String mountainName) {
+        // Implement starting the climbing process at the given mountain
+        Mountain mountain = mountainRepository.byName(mountainName);
+        if (mountain == null) {
+            throw new IllegalArgumentException("Mountain " + mountainName + " doesn't exist.");
+        }
+
+        Collection<Climber> climbers = climberRepository.getCollection();
+        if (climbers.isEmpty()) {
+            throw new IllegalArgumentException("You must have at least one climber to start climbing.");
+        }
+
+        int removedClimberCount = climbers.size();
+        climberRepository.getCollection().clear();
+        return "The climb took place at " + mountainName + ". " + removedClimberCount + " climber/s was/were removed from this climb.";
+    }
+
+    @Override
+    public String getStatistics() {
+        // Implement getting statistics for climbers
+        Collection<Climber> climbers = climberRepository.getCollection();
+        StringBuilder statistics = new StringBuilder();
+        statistics.append(climbers.size()).append(" mountain/s was/were climbed.\n");
+        statistics.append("Climber's statistics:\n");
+        for (Climber climber : climbers) {
+            statistics.append("Name: ").append(climber.getName()).append("\n");
+            statistics.append("Strength: ").append(climber.getStrength()).append("\n");
+            statistics.append("Conquered peaks: ");
+            if (climber.getRoster() != null && !climber.getRoster().getPeaks().isEmpty()) {
+                statistics.append(String.join(", ", climber.getRoster().getPeaks())).append("\n");
+            } else {
+                statistics.append("None\n");
+            }
+        }
+        return statistics.toString();
+    }
+}
