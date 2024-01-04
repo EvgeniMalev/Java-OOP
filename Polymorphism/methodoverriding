@@ -1,0 +1,33 @@
+class Language {
+  public void displayInfo() {
+    System.out.println("Common Chineese Language");
+  }
+}
+
+class Java extends Language {
+  @Override
+  public void displayInfo() {
+    System.out.println("Java Programming Language");
+  }
+}
+
+class JS extends Language {
+  @Override
+  public void displayInfo() {
+    System.out.println("JS Programming Language");
+  }
+}
+
+class Main {
+  public static void main(String[] args) {
+
+    Java j1 = new Java();
+    j1.displayInfo(); 
+
+    JS j2 = new JS();
+    j2.displayInfo(); 
+
+    Language l1 = new Language();
+    l1.displayInfo(); 
+  }
+}
