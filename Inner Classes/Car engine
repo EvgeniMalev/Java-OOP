@@ -1,0 +1,39 @@
+class carengine {
+    double price;
+    
+    class Engine{
+     
+        double cylinders;
+        String manufacturer;
+
+        double getRatio(){
+            return 2.3;
+        }
+    }
+  
+    protected class Automotivebattery{
+   
+        double Ampherehours;
+        String manufacturer;
+
+        double getChargedhours(){
+            return 2.5;
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        
+        Engine engine = new Engine();
+
+       
+        Engine.petrol engine petrol engine = engine.new petrol engine();
+
+       
+        Engine.Automotivebattery automotivebattery = engine.new Automotivebattery();
+        System.out.println("Car Battery charged = " + processor.getChargedhours());
+        System.out.println("Engine ratio = " + ram.getRatio());
+    }
+}
