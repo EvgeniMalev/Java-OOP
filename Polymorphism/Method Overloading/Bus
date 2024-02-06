@@ -1,0 +1,14 @@
+class  Bus  {
+public  void  travel()  {
+System.out.println("The bus is travelling.");
+}
+public  void  travel(int distance)  {
+System.out.println("The bus is travelling "  + distance +  " long.");
+}
+public  void  travel(String company,  int distance)  {
+System.out.println("The bus from "  + company +  " is travelling "  + distance +  " to go to Yerevan.");
+}
+public  void  travel(String company,  int distance, int hours)  {
+System.out.println("The bus from "  + company +  " is travelling "  + distance +  " to go to Yerevan for" + hours "hours.");
+}
+}
