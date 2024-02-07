@@ -1,0 +1,30 @@
+public class Carregistration {
+    private String citycode;
+    private int registrationnumber;
+    private String additionalregcode;
+    private int framenumber;
+    private int enginenumber;
+
+    public Carregistration(String citycode, int registrationnumber, String additionalregcode,
+                           int framenumber, int enginenumber) {
+        this.citycode = citycode;
+        this.registrationnumber = registrationnumber;
+        this.additionalregcode = additionalregcode;
+        this.framenumber = framenumber;
+        this.enginenumber = enginenumber;
+    }
+
+    public Carregistration(String citycode, int registrationnumber, String additionalregcode,
+                           int framenumber, int enginenumber) {
+        this.citycode = citycode;
+        this.registrationnumber = registrationnumber;
+        this.additionalregcode = additionalregcode;
+        this.framenumber = framenumber;
+        this.enginenumber = enginenumber;
+    }
+
+    public static void main(String[] args) {
+        Carregistration car1 = new Carregistration("BT", 7678, "AX", 3452677575, 311445649012L);
+        Carregistration car2 = new Carregistration("EB", 7118, "BX", 634764523, 245590884011L);
+    }
+}
