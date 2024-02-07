@@ -1,0 +1,93 @@
+
+class wellZelenika {
+    private int value1;
+    private int value2;
+
+    public wellZelenika(int value1, int value2) {
+        this.value1 = value1;
+        this.value2 = value2;
+    }
+}
+
+class wellKsilifor {
+    private int value1;
+    private int value2;
+
+    public wellKsilifor(int value1, int value2) {
+        this.value1 = value1;
+        this.value2 = value2;
+    }
+}
+
+
+class wellSvetagora {
+    private int value1;
+    private int value2;
+
+    public wellSvetagora(int value1, int value2) {
+        this.value1 = value1;
+        this.value2 = value2;
+    }
+}
+
+class wellAsenov {
+    private int value1;
+    private int value2;
+
+    
+    public wellAsenov(int value1, int value2) {
+        this.value1 = value1;
+        this.value2 = value2;
+    }
+}
+
+
+class wellSuhatacheshma {
+    private int value1;
+    private int value2;
+
+   
+    public wellSuhatacheshma(int value1, int value2) {
+        this.value1 = value1;
+        this.value2 = value2;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+      
+        wellZelenika[] w1;
+        wellKsilifor[] w2;
+        wellSvetagora[] w3;
+        wellAsenov[] w4;
+        wellSuhatacheshma[] w5;
+
+        
+        w1 = new wellZelenika[2];
+        w2 = new wellKsilifor[1];
+        w3 = new wellSvetagora[3];
+        w4 = new wellAsenov[2];
+        w5 = new wellSuhatacheshma[1];
+
+        
+        for (int i = 0; i < 2; ++i) {
+            w1[i] = new wellZelenika(i, i);
+        }
+
+        for (int i = 0; i < 1; ++i) {
+            w2[i] = new wellKsilifor(i, i);
+        }
+
+        for (int i = 0; i < 3; ++i) {
+            w3[i] = new wellSvetagora(i, i);
+        }
+
+        for (int i = 0; i < 2; ++i) {
+            w4[i] = new wellAsenov(i, i);
+        }
+
+        for (int i = 0; i < 1; ++i) {
+            w5[i] = new wellSuhatacheshma(i, i);
+        }
+    }
+}
