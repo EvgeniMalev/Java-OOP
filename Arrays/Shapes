@@ -1,0 +1,80 @@
+public class Shape {
+    protected double area;
+
+    public Shape() {
+        this.area = 0.0;
+    }
+  
+    protected void calculateArea() {
+    }
+
+    public double getArea() {
+        return area;
+    }
+}
+
+
+class Triangle extends Shape {
+    private double a;
+    private double ha;
+    
+    public Triangle(double a, double ha) {
+        this.a = a;
+		this.ha = ha;
+        calculateArea();
+    }
+
+
+    protected void calculateArea() {
+        area = (a * ha)/2 ;
+    }
+}
+
+
+class Square extends Shape {
+    private double height;
+
+  
+    public Square( double height) {
+        this.height = height;
+        calculateArea();
+    }
+
+    protected void calculateArea() {
+        area = height * height;
+    }
+}
+
+class Trapeziod extends Shape {
+    private double height;
+    private double a;
+    private double b;
+	
+    public Trapeziod(double height, double a,double b) {
+        this.height = height;
+		this.a = a;
+		this.b = b;
+        calculateArea();
+    }
+
+    protected void calculateArea() {
+        area = ((a + b)/2) * height;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+ 
+        Shape[] shapes = new Shape[3];
+
+        shapes[0] = new Triangle(3.0 1.0);
+
+        shapes[1] = new Square(4.0);
+		
+		shapes[2] = new Trapezoid(4.0 2.0 1.5);
+
+        for (Shape shape : shapes) {
+            System.out.println("Area: " + shape.getArea());
+        }
+    }
+}
